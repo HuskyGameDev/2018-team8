@@ -9,9 +9,21 @@ public class Player_Movement : MonoBehaviour {
     public bool playerDirectionR = true;
     public float MoveXAxis;
     public float MoveYAxis;
+    bool jumping;
+    bool grounded;
+    public float groundedSkin = .05f;
+    public LayerMask mask;
 
-	// Use this for initialization
-	void Start () {
+    Vector2 playerSize;
+    Vector2 boxSize;
+
+    private void Awake()
+    {
+        playerSize = GetComponent<BoxCollider2D>().size;
+        boxSize = new Vector2(playerSize.x, groundedSkin);
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -23,9 +35,9 @@ public class Player_Movement : MonoBehaviour {
 	//Holds movement controls, animations, character physics
 	void PlayerMove() {
         MoveXAxis = Input.GetAxis("Horizontal");
-        if(Input.GetButtonDown ("Jump"))
+        if(Input.GetButtonDown ("Jump") && grounded)
         {
-            Jumping();
+            jumping = true;
         }
         if(MoveXAxis > 0.0f && playerDirectionR == false)
         {
@@ -41,17 +53,7 @@ public class Player_Movement : MonoBehaviour {
     //Allows the player to jump
     void Jumping()
     {
-        int jumpCounter = 1;
-        print("Testing");
-        if (jumpCounter != 0)
-        {
-            MoveYAxis = Input.GetAxis("Vertical");
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpHeight);
-            
-
-        }
-
-        
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpHeight, ForceMode2D.Impulse);       
     }
     //Flips player sprite when changing directions, left and right.
 	void FlipSprite() {
@@ -61,4 +63,20 @@ public class Player_Movement : MonoBehaviour {
         transform.localScale = direction;
 	}
 
-	}
+    private void FixedUpdate() {
+        if (jumping)
+        {
+            Jumping();
+            jumping = false;
+            grounded = false;
+        } else
+        {
+            Vector2 boxCenter = (Vector2)transform.position + Vector2.down * (playerSize.y + boxSize.y) * 0.5f;
+            grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0f, mask) != null);
+        }
+        }
+
+   
+
+  
+}
