@@ -752,6 +752,7 @@ GameObject:
   - component: {fileID: 1719954190}
   - component: {fileID: 1719954193}
   - component: {fileID: 1719954194}
+  - component: {fileID: 1719954195}
   m_Layer: 8
   m_Name: CharacterPrototype (1)
   m_TagString: Player
@@ -773,7 +774,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -883,3 +884,18 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 1
+--- !u!114 &1719954195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1719954189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36adafa2ec5ea674ca08f0c13703b6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 20
+  dashCount: 0
+  MoveXAxis: 0
+  dashDir: 1
