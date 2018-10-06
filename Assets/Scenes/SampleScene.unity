@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 1028151746}
   - component: {fileID: 1028151745}
   - component: {fileID: 1028151744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CharacterPrototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 1719954190}
   - component: {fileID: 1719954193}
   - component: {fileID: 1719954194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CharacterPrototype (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -875,7 +875,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementSpeed: 10
-  playerJumpHeight: 500
+  playerJumpHeight: 10
   playerDirectionR: 1
   MoveXAxis: 0
   MoveYAxis: 0
+  groundedSkin: 0.05
+  mask:
+    serializedVersion: 2
+    m_Bits: 1
