@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Wander : MonoBehaviour {
 
@@ -19,11 +20,11 @@ public class Wander : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!agent.PathPending && agent.remainingDistance < 0.5f)
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
             GoToNextPoint();
 	}
 
-    GoToNextPoint() {
+    void GoToNextPoint() {
         if (points.Length == 0)
             return;
 
