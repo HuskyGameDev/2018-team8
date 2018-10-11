@@ -5,10 +5,12 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour {
 
     public int playerMovementSpeed = 10; //Change?
-    public int playerJumpHeight = 2000; //Change?
+    public int playerJumpHeight = 10; //Change?
     public bool playerDirectionR = true;
     public float MoveXAxis;
     public float MoveYAxis;
+    public double crouchMod = .2;
+    public bool crouching;
     bool jumping;
     bool grounded;
     public float groundedSkin = .05f;
@@ -29,17 +31,25 @@ public class Player_Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		PlayerMove();
-	}
+        PlayerMove();
+    }
 
 	//Holds movement controls, animations, character physics
 	void PlayerMove() {
+        int movespeed = playerMovementSpeed;
         MoveXAxis = Input.GetAxis("Horizontal");
-        if(Input.GetButtonDown ("Jump") && grounded)
+        if (Input.GetButtonDown ("Jump") && grounded)
         {
             jumping = true;
         }
-        if(MoveXAxis > 0.0f && playerDirectionR == false)
+        if (Input.GetButton("Crouch"))
+        {
+            crouching = true;
+        } else
+        {
+            crouching = false;
+        }
+        if (MoveXAxis > 0.0f && playerDirectionR == false)
         {
             FlipSprite();
         }
@@ -47,7 +57,11 @@ public class Player_Movement : MonoBehaviour {
         {
             FlipSprite();
         }
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(MoveXAxis * playerMovementSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        if (crouching)
+        {
+            movespeed = (int) (movespeed * crouchMod);
+        }
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(MoveXAxis * movespeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
 
     //Allows the player to jump
