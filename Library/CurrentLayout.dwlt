@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 708, y: 471}
   m_MaxSize: {x: 16008, y: 14021}
   vertical: 0
-  controlID: 1388
+  controlID: 335
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 608, y: 471}
   m_MaxSize: {x: 12008, y: 14021}
   vertical: 1
-  controlID: 1323
+  controlID: 336
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_MinSize: {x: 608, y: 221}
   m_MaxSize: {x: 12008, y: 4021}
   vertical: 0
-  controlID: 1301
+  controlID: 337
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fc260000
+    m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
@@ -413,8 +413,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
-  m_ExpandedScenes:
-  - SampleScene
+  m_ExpandedScenes: []
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -570,7 +569,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 63}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 562a0000
     m_LastClickedID: 10838
     m_ExpandedIDs: 00000000562a0000de2a00007c2b0000a22b0000062c000000ca9a3b
@@ -745,10 +744,10 @@ MonoBehaviour:
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
+  repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 0
-  changeTab: 3
-  activeTab: 3
+  changeTab: 2
+  activeTab: 2
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -905,10 +904,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2018-10-19T17:44:26.165-04:00
+      updatedTimeString: 2018-10-19T17:51:52.266-04:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2018-10-19T17:44:25.829-04:00
+      updatedTimeString: 2018-10-19T17:49:48.337-04:00
       cacheType: 1
     currentBranch:
       name: master
@@ -942,27 +941,8 @@ MonoBehaviour:
         keys: []
         values: []
       folders:
-        keys:
-        - Library
-        values:
-        - path: Library
-          label: Library
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -991,78 +971,6 @@ MonoBehaviour:
           originalPath: 
           status: 0
           staged: 0
-      - path: Library
-        label: Library
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Library\assetDatabase3
-        label: assetDatabase3
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Library\assetDatabase3
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\assetDatabase3
-          projectPath: Library\assetDatabase3
-          originalPath: 
-          status: 3
-          staged: 0
-      - path: Library\CurrentMaximizeLayout.dwlt
-        label: CurrentMaximizeLayout.dwlt
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Library\CurrentMaximizeLayout.dwlt
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentMaximizeLayout.dwlt
-          projectPath: Library\CurrentMaximizeLayout.dwlt
-          originalPath: 
-          status: 3
-          staged: 0
-      - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
-        label: shadercompiler-UnityShaderCompiler.exe0.log
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Library\shadercompiler-UnityShaderCompiler.exe0.log
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\shadercompiler-UnityShaderCompiler.exe0.log
-          projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
-          originalPath: 
-          status: 3
-          staged: 0
       selectedNode:
         path: 
         label: 
@@ -1082,34 +990,16 @@ MonoBehaviour:
           originalPath: 
           status: 0
           staged: 0
-    gitStatusEntries:
-    - path: Library\assetDatabase3
-      fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\assetDatabase3
-      projectPath: Library\assetDatabase3
-      originalPath: 
-      status: 3
-      staged: 0
-    - path: Library\CurrentMaximizeLayout.dwlt
-      fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentMaximizeLayout.dwlt
-      projectPath: Library\CurrentMaximizeLayout.dwlt
-      originalPath: 
-      status: 3
-      staged: 0
-    - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
-      fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\shadercompiler-UnityShaderCompiler.exe0.log
-      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
-      originalPath: 
-      status: 3
-      staged: 0
-    changedFilesText: 3 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2018-10-19T17:49:14.351-04:00
+      updatedTimeString: 2018-10-19T17:49:48.337-04:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2018-10-19T17:49:14.502-04:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 5
     lastLocksChangedEvent:
-      updatedTimeString: 2018-10-19T17:49:16.101-04:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 6
   historyView:
     currentLogHasUpdate: 0
@@ -1117,6 +1007,42 @@ MonoBehaviour:
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: 1ba8abfd6b5a9b3639d8dc53ab8177f2f0a989b3
+        mergeA: 
+        mergeB: 
+        authorName: Tristan Sorensen
+        authorEmail: tasorens@mtu.edu
+        commitEmail: tasorens@mtu.edu
+        commitName: Tristan Sorensen
+        summary: idk what changes these are but i need to push these
+        description: idk what changes these are but i need to push these
+        timeString: 2018-10-19T17:51:51.000-04:00
+        commitTimeString: 2018-10-19T17:51:51.000-04:00
+        changes:
+        - path: Library\CurrentLayout.dwlt
+          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentLayout.dwlt
+          projectPath: Library\CurrentLayout.dwlt
+          originalPath: 
+          status: 3
+          staged: 0
+        - path: Library\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentMaximizeLayout.dwlt
+          projectPath: Library\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          status: 3
+          staged: 0
+        - path: Library\assetDatabase3
+          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\assetDatabase3
+          projectPath: Library\assetDatabase3
+          originalPath: 
+          status: 3
+          staged: 0
+        - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
+          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\shadercompiler-UnityShaderCompiler.exe0.log
+          projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+          originalPath: 
+          status: 3
+          staged: 0
       - commitID: 89fe08f8c8112adbecf66b886b8cf3691442b6d6
         mergeA: 
         mergeB: 
@@ -17608,425 +17534,35 @@ MonoBehaviour:
           status: 4
           staged: 0
       statusAhead: 0
-      selectedIndex: 7
+      selectedIndex: 0
     selectedEntry:
-      commitID: 6331076e825ee4eb7f087be97cfea128f6abfa20
+      commitID: 1ba8abfd6b5a9b3639d8dc53ab8177f2f0a989b3
       mergeA: 
       mergeB: 
-      authorName: Kyle Alberth
-      authorEmail: kealbert@mtu.edu
-      commitEmail: kealbert@mtu.edu
-      commitName: Kyle Alberth
-      summary: Wander Script
-      description: Wander Script
-      timeString: 2018-10-06T18:04:12.000-04:00
-      commitTimeString: 2018-10-06T18:04:12.000-04:00
+      authorName: Tristan Sorensen
+      authorEmail: tasorens@mtu.edu
+      commitEmail: tasorens@mtu.edu
+      commitName: Tristan Sorensen
+      summary: idk what changes these are but i need to push these
+      description: idk what changes these are but i need to push these
+      timeString: 2018-10-19T17:51:51.000-04:00
+      commitTimeString: 2018-10-19T17:51:51.000-04:00
       changes:
-      - path: Assembly-CSharp.csproj
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assembly-CSharp.csproj
-        projectPath: Assembly-CSharp.csproj
-        originalPath: 
-        status: 3
-        staged: 0
-      - path: Assets\Plugins.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins.meta
-        projectPath: Assets\Plugins.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub.meta
-        projectPath: Assets\Plugins\GitHub.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor.meta
-        projectPath: Assets\Plugins\GitHub\Editor.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
-        projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
-        projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
-        projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
-        projectPath: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\Mono.Posix.dll
-        projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\QuickGuide.pdf
-        projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
-        projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
-        projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\System.Threading.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\System.Threading.dll
-        projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\big-logo@2x.png
-        projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
-        projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\credits.txt
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\credits.txt
-        projectPath: Assets\Plugins\GitHub\Editor\credits.txt
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\credits.txt.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\credits.txt.meta
-        projectPath: Assets\Plugins\GitHub\Editor\credits.txt.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\eula.txt
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\eula.txt
-        projectPath: Assets\Plugins\GitHub\Editor\eula.txt
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\eula.txt.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\eula.txt.meta
-        projectPath: Assets\Plugins\GitHub\Editor\eula.txt.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.bundle
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.bundle
-        projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
-        projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.so
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.so
-        projectPath: Assets\Plugins\GitHub\Editor\libsfw.so
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.so.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.so.meta
-        projectPath: Assets\Plugins\GitHub\Editor\libsfw.so.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\sfw.net.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\sfw.net.dll
-        projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64.meta
-        projectPath: Assets\Plugins\GitHub\Editor\x64.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
-        projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
-        projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86.meta
-        projectPath: Assets\Plugins\GitHub\Editor\x86.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
-        projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
-        projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
-        projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Wander.cs
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Wander.cs
-        projectPath: Assets\Wander.cs
-        originalPath: 
-        status: 4
-        staged: 0
-      - path: Assets\Wander.cs.meta
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Wander.cs.meta
-        projectPath: Assets\Wander.cs.meta
-        originalPath: 
-        status: 4
-        staged: 0
       - path: Library\CurrentLayout.dwlt
         fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentLayout.dwlt
         projectPath: Library\CurrentLayout.dwlt
         originalPath: 
         status: 3
         staged: 0
-      - path: Library\ScriptAssemblies\Assembly-CSharp.dll
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\ScriptAssemblies\Assembly-CSharp.dll
-        projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+      - path: Library\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentMaximizeLayout.dwlt
+        projectPath: Library\CurrentMaximizeLayout.dwlt
         originalPath: 
-        status: 5
-        staged: 0
-      - path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-        projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-        originalPath: 
-        status: 5
+        status: 3
         staged: 0
       - path: Library\assetDatabase3
         fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\assetDatabase3
         projectPath: Library\assetDatabase3
-        originalPath: 
-        status: 3
-        staged: 0
-      - path: Library\expandedItems
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\expandedItems
-        projectPath: Library\expandedItems
-        originalPath: 
-        status: 3
-        staged: 0
-      - path: Library\metadata\09\09d002127541b2b43b24ce837fa960d4
-        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\metadata\09\09d002127541b2b43b24ce837fa960d4
-        projectPath: Library\metadata\09\09d002127541b2b43b24ce837fa960d4
         originalPath: 
         status: 3
         staged: 0
@@ -18038,6 +17574,42 @@ MonoBehaviour:
         staged: 0
     detailsScroll: {x: 0, y: 0}
     logEntries:
+    - commitID: 1ba8abfd6b5a9b3639d8dc53ab8177f2f0a989b3
+      mergeA: 
+      mergeB: 
+      authorName: Tristan Sorensen
+      authorEmail: tasorens@mtu.edu
+      commitEmail: tasorens@mtu.edu
+      commitName: Tristan Sorensen
+      summary: idk what changes these are but i need to push these
+      description: idk what changes these are but i need to push these
+      timeString: 2018-10-19T17:51:51.000-04:00
+      commitTimeString: 2018-10-19T17:51:51.000-04:00
+      changes:
+      - path: Library\CurrentLayout.dwlt
+        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentLayout.dwlt
+        projectPath: Library\CurrentLayout.dwlt
+        originalPath: 
+        status: 3
+        staged: 0
+      - path: Library\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentMaximizeLayout.dwlt
+        projectPath: Library\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        status: 3
+        staged: 0
+      - path: Library\assetDatabase3
+        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\assetDatabase3
+        projectPath: Library\assetDatabase3
+        originalPath: 
+        status: 3
+        staged: 0
+      - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
+        fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\shadercompiler-UnityShaderCompiler.exe0.log
+        projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+        originalPath: 
+        status: 3
+        staged: 0
     - commitID: 89fe08f8c8112adbecf66b886b8cf3691442b6d6
       mergeA: 
       mergeB: 
@@ -34535,182 +34107,11 @@ MonoBehaviour:
         values: []
       folders:
         keys:
-        - Assets
-        - Assets\Plugins
-        - Assets\Plugins\GitHub
-        - Assets\Plugins\GitHub\Editor
-        - Assets\Plugins\GitHub\Editor\x64
-        - Assets\Plugins\GitHub\Editor\x86
         - Library
-        - Library\ScriptAssemblies
-        - Library\metadata
-        - Library\metadata\09
         values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Assets\Plugins
-          label: Plugins
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Assets\Plugins\GitHub
-          label: GitHub
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Assets\Plugins\GitHub\Editor
-          label: Editor
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Assets\Plugins\GitHub\Editor\x64
-          label: x64
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Assets\Plugins\GitHub\Editor\x86
-          label: x86
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
         - path: Library
           label: Library
           level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Library\ScriptAssemblies
-          label: ScriptAssemblies
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Library\metadata
-          label: metadata
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            status: 0
-            staged: 0
-        - path: Library\metadata\09
-          label: 09
-          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -34754,1230 +34155,6 @@ MonoBehaviour:
           originalPath: 
           status: 0
           staged: 0
-      - path: Assembly-CSharp.csproj
-        label: Assembly-CSharp.csproj
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assembly-CSharp.csproj
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assembly-CSharp.csproj
-          projectPath: Assembly-CSharp.csproj
-          originalPath: 
-          status: 3
-          staged: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Assets\Plugins.meta
-        label: Plugins.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins.meta
-          projectPath: Assets\Plugins.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins
-        label: Plugins
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Assets\Plugins\GitHub.meta
-        label: GitHub.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub.meta
-          projectPath: Assets\Plugins\GitHub.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub
-        label: GitHub
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor.meta
-        label: Editor.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor.meta
-          projectPath: Assets\Plugins\GitHub\Editor.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor
-        label: Editor
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
-        label: AsyncBridge.Net35.dll
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
-          projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
-        label: AsyncBridge.Net35.dll.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
-        label: ExtensionLoader.cs
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
-          projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
-        label: ExtensionLoader.cs.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
-          projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
-        label: GitHub.Api.45.dll
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
-        label: GitHub.Api.45.dll.mdb
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
-        label: GitHub.Api.45.dll.mdb.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
-        label: GitHub.Api.45.dll.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
-        label: GitHub.Api.dll
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
-        label: GitHub.Api.dll.mdb
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
-        label: GitHub.Api.dll.mdb.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
-        label: GitHub.Api.dll.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
-        label: GitHub.Logging.dll
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
-        label: GitHub.Logging.dll.mdb
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
-        label: GitHub.Logging.dll.mdb.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
-        label: GitHub.Logging.dll.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
-        label: GitHub.Unity.45.dll
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
-        label: GitHub.Unity.45.dll.mdb
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
-        label: GitHub.Unity.45.dll.mdb.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
-        label: GitHub.Unity.45.dll.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
-        label: GitHub.Unity.dll
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
-        label: GitHub.Unity.dll.mdb
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
-        label: GitHub.Unity.dll.mdb.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
-        label: GitHub.Unity.dll.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
-        label: ICSharpCode.SharpZipLib.dll
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
-          projectPath: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
-        label: ICSharpCode.SharpZipLib.dll.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\ICSharpCode.SharpZipLib.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
-        label: Mono.Posix.dll
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\Mono.Posix.dll
-          projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
-        label: Mono.Posix.dll.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
-        label: QuickGuide.pdf
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\QuickGuide.pdf
-          projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
-        label: QuickGuide.pdf.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
-          projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
-        label: ReadOnlyCollectionsInterfaces.dll
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
-          projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
-        label: ReadOnlyCollectionsInterfaces.dll.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\System.Threading.dll
-        label: System.Threading.dll
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\System.Threading.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\System.Threading.dll
-          projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
-        label: System.Threading.dll.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png
-        label: big-logo@2x.png
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\big-logo@2x.png
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\big-logo@2x.png
-          projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
-        label: big-logo@2x.png.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
-          projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\credits.txt
-        label: credits.txt
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\credits.txt
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\credits.txt
-          projectPath: Assets\Plugins\GitHub\Editor\credits.txt
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\credits.txt.meta
-        label: credits.txt.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\credits.txt.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\credits.txt.meta
-          projectPath: Assets\Plugins\GitHub\Editor\credits.txt.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\eula.txt
-        label: eula.txt
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\eula.txt
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\eula.txt
-          projectPath: Assets\Plugins\GitHub\Editor\eula.txt
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\eula.txt.meta
-        label: eula.txt.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\eula.txt.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\eula.txt.meta
-          projectPath: Assets\Plugins\GitHub\Editor\eula.txt.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.bundle
-        label: libsfw.bundle
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\libsfw.bundle
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.bundle
-          projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
-        label: libsfw.bundle.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
-          projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.so
-        label: libsfw.so
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\libsfw.so
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.so
-          projectPath: Assets\Plugins\GitHub\Editor\libsfw.so
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\libsfw.so.meta
-        label: libsfw.so.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\libsfw.so.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\libsfw.so.meta
-          projectPath: Assets\Plugins\GitHub\Editor\libsfw.so.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\sfw.net.dll
-        label: sfw.net.dll
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\sfw.net.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\sfw.net.dll
-          projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
-        label: sfw.net.dll.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64.meta
-        label: x64.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x64.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64.meta
-          projectPath: Assets\Plugins\GitHub\Editor\x64.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64
-        label: x64
-        level: 4
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
-        label: pthreadVC2.dll
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
-          projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
-        label: pthreadVC2.dll.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
-        label: sfw_x64.dll
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
-          projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
-        label: sfw_x64.dll.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86.meta
-        label: x86.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x86.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86.meta
-          projectPath: Assets\Plugins\GitHub\Editor\x86.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86
-        label: x86
-        level: 4
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
-        label: pthreadVC2.dll
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
-          projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
-        label: pthreadVC2.dll.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
-        label: sfw_x86.dll
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
-          projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
-        label: sfw_x86.dll.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
-          projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Wander.cs
-        label: Wander.cs
-        level: 1
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Wander.cs
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Wander.cs
-          projectPath: Assets\Wander.cs
-          originalPath: 
-          status: 4
-          staged: 0
-      - path: Assets\Wander.cs.meta
-        label: Wander.cs.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Wander.cs.meta
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Assets\Wander.cs.meta
-          projectPath: Assets\Wander.cs.meta
-          originalPath: 
-          status: 4
-          staged: 0
       - path: Library
         label: Library
         level: 0
@@ -36014,27 +34191,9 @@ MonoBehaviour:
           originalPath: 
           status: 3
           staged: 0
-      - path: Library\ScriptAssemblies
-        label: ScriptAssemblies
+      - path: Library\CurrentMaximizeLayout.dwlt
+        label: CurrentMaximizeLayout.dwlt
         level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Library\ScriptAssemblies\Assembly-CSharp.dll
-        label: Assembly-CSharp.dll
-        level: 2
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -36044,29 +34203,11 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Library\ScriptAssemblies\Assembly-CSharp.dll
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\ScriptAssemblies\Assembly-CSharp.dll
-          projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+          path: Library\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentMaximizeLayout.dwlt
+          projectPath: Library\CurrentMaximizeLayout.dwlt
           originalPath: 
-          status: 5
-          staged: 0
-      - path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-        label: Assembly-CSharp.dll.mdb
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-          projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-          originalPath: 
-          status: 5
+          status: 3
           staged: 0
       - path: Library\assetDatabase3
         label: assetDatabase3
@@ -36083,78 +34224,6 @@ MonoBehaviour:
           path: Library\assetDatabase3
           fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\assetDatabase3
           projectPath: Library\assetDatabase3
-          originalPath: 
-          status: 3
-          staged: 0
-      - path: Library\expandedItems
-        label: expandedItems
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Library\expandedItems
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\expandedItems
-          projectPath: Library\expandedItems
-          originalPath: 
-          status: 3
-          staged: 0
-      - path: Library\metadata
-        label: metadata
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Library\metadata\09
-        label: 09
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          status: 0
-          staged: 0
-      - path: Library\metadata\09\09d002127541b2b43b24ce837fa960d4
-        label: 09d002127541b2b43b24ce837fa960d4
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Library\metadata\09\09d002127541b2b43b24ce837fa960d4
-          fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\metadata\09\09d002127541b2b43b24ce837fa960d4
-          projectPath: Library\metadata\09\09d002127541b2b43b24ce837fa960d4
           originalPath: 
           status: 3
           staged: 0
@@ -36196,10 +34265,10 @@ MonoBehaviour:
           status: 0
           staged: 0
     lastLogChangedEvent:
-      updatedTimeString: 2018-10-19T17:48:03.457-04:00
+      updatedTimeString: 2018-10-19T17:57:17.474-04:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2018-10-19T17:48:03.291-04:00
+      updatedTimeString: 2018-10-19T17:57:17.305-04:00
       cacheType: 4
   settingsView:
     gitPathView:
@@ -36211,7 +34280,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2018-10-19T17:44:25.829-04:00
+      updatedTimeString: 2018-10-19T17:49:48.337-04:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/HuskyGameDev/2018-team8.git
@@ -36225,7 +34294,7 @@ MonoBehaviour:
       newGitEmail: tasorens@mtu.edu
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2018-10-19T17:40:51.700-04:00
+        updatedTimeString: 2018-10-19T17:53:05.222-04:00
         cacheType: 7
     webTimeout: 3000
     gitTimeout: 5000
@@ -36253,34 +34322,16 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Jan 0001, 00:00
     lastLocksChangedEvent:
-      updatedTimeString: 2018-10-19T17:48:57.598-04:00
+      updatedTimeString: 2018-10-19T17:55:13.855-04:00
       cacheType: 6
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2018-10-19T17:48:57.598-04:00
+      updatedTimeString: 2018-10-19T17:55:13.855-04:00
       cacheType: 6
     lastUserChangedEvent:
-      updatedTimeString: 2018-10-19T17:40:51.700-04:00
+      updatedTimeString: 2018-10-19T17:53:05.222-04:00
       cacheType: 7
     lockedFiles: []
-    gitStatusEntries:
-    - path: Library\assetDatabase3
-      fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\assetDatabase3
-      projectPath: Library\assetDatabase3
-      originalPath: 
-      status: 3
-      staged: 0
-    - path: Library\CurrentMaximizeLayout.dwlt
-      fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\CurrentMaximizeLayout.dwlt
-      projectPath: Library\CurrentMaximizeLayout.dwlt
-      originalPath: 
-      status: 3
-      staged: 0
-    - path: Library\shadercompiler-UnityShaderCompiler.exe0.log
-      fullPath: C:\Users\Trist\OneDrive\Documents\GitHub\2018-team8\Library\shadercompiler-UnityShaderCompiler.exe0.log
-      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
-      originalPath: 
-      status: 3
-      staged: 0
+    gitStatusEntries: []
     currentUsername: Tristo3399
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -36296,7 +34347,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/HuskyGameDev/2018-team8.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -36307,13 +34358,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2018-10-19T17:49:14.351-04:00
+    updatedTimeString: 2018-10-19T17:49:48.337-04:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2018-10-19T17:48:03.291-04:00
+    updatedTimeString: 2018-10-19T17:57:17.305-04:00
     cacheType: 4
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2018-10-19T17:49:14.502-04:00
+    updatedTimeString: 0001-01-01T00:00:00.000+00:00
     cacheType: 5
   pullButtonContent:
     m_Text: Pull
@@ -36333,5 +34384,5 @@ MonoBehaviour:
     m_Tooltip: 
   repositoryProgressValue: 0
   repositoryProgressMessage: 
-  appManagerProgressValue: 0.5
-  appManagerProgressMessage: Setting up git...
+  appManagerProgressValue: 1
+  appManagerProgressMessage: Initialized
