@@ -210,10 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e056ed409383f49b7f996a3795f3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xLeftBound: -4.53
-  xRightBound: 13.5
-  yUpBound: 0
-  yDownBound: 0
 --- !u!1 &563987103
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +829,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1719954189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4967384, y: 0.45713866, z: 0}
+  m_LocalPosition: {x: -4.45, y: 0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -880,6 +876,8 @@ MonoBehaviour:
   playerDirectionR: 1
   MoveXAxis: 0
   MoveYAxis: 0
+  crouchMod: 0.2
+  crouching: 0
   groundedSkin: 0.05
   mask:
     serializedVersion: 2
