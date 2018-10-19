@@ -30,7 +30,6 @@ public class PlayerDash : MonoBehaviour {
         {
             dashDir = 1;
         }
-
     }
 
     private void FixedUpdate()
