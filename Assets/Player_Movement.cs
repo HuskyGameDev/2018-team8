@@ -14,10 +14,14 @@ public class Player_Movement : MonoBehaviour {
     bool jumping;
     bool grounded;
     public float groundedSkin = .05f;
+    public float fireRate = 0.05f;
+    float nextFire = 0f;
     public LayerMask mask;
+    public GameObject projectileToLeft, projectileToRight;
 
     Vector2 playerSize;
     Vector2 boxSize;
+    Vector2 projectilePosition;
 
     private void Awake()
     {
@@ -32,6 +36,11 @@ public class Player_Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         PlayerMove();
+        if(Input.GetKeyDown(KeyCode.RightShift) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Fire();
+        }
     }
 
 	//Holds movement controls, animations, character physics
@@ -76,6 +85,20 @@ public class Player_Movement : MonoBehaviour {
         direction.x *= -1;
         transform.localScale = direction;
 	}
+
+    void Fire()
+    {
+        projectilePosition = transform.position;
+        if(playerDirectionR == true)
+        {
+            projectilePosition += new Vector2(+1f, -0.05f);
+            Instantiate(projectileToRight, projectilePosition, Quaternion.identity);
+        } else
+        {
+            projectilePosition += new Vector2(-1f, -0.05f);
+            Instantiate(projectileToLeft, projectilePosition, Quaternion.identity);
+        }
+    }
 
     private void FixedUpdate() {
         if (jumping)
