@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour {
 
+    public bool crouching;
+    public bool playerDirectionRight = true;
+    bool grounded;
+    bool jumping;
+    public double crouchMod = .2;
+    public float fireRate = 0.05f;
+    public float groundedSkin = .05f;
+    public float moveXAxis;
+    public float moveYAxis;
+    float nextFire = 0f;
     public int playerMovementSpeed = 10; //Change?
     public int playerJumpHeight = 10; //Change?
-    public bool playerDirectionR = true;
-    public float MoveXAxis;
-    public float MoveYAxis;
-    public double crouchMod = .2;
-    public bool crouching;
-    bool jumping;
-    bool grounded;
-    public float groundedSkin = .05f;
-    public float fireRate = 0.05f;
-    float nextFire = 0f;
     public LayerMask mask;
     public GameObject projectileToLeft, projectileToRight;
-
     Vector2 playerSize;
     Vector2 boxSize;
     Vector2 projectilePosition;
@@ -30,7 +29,7 @@ public class Player_Movement : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-		
+		// Nothing
 	}
 	
 	// Update is called once per frame
@@ -46,7 +45,7 @@ public class Player_Movement : MonoBehaviour {
 	//Holds movement controls, animations, character physics
 	void PlayerMove() {
         int movespeed = playerMovementSpeed;
-        MoveXAxis = Input.GetAxis("Horizontal");
+        moveXAxis = Input.GetAxis("Horizontal");
         if (Input.GetButtonDown ("Jump") && grounded)
         {
             jumping = true;
@@ -58,11 +57,11 @@ public class Player_Movement : MonoBehaviour {
         {
             crouching = false;
         }
-        if (MoveXAxis > 0.0f && playerDirectionR == false)
+        if (moveXAxis > 0.0f && playerDirectionRight == false)
         {
             FlipSprite();
         }
-        if (MoveXAxis < 0.0f && playerDirectionR == true)
+        if (moveXAxis < 0.0f && playerDirectionRight == true)
         {
             FlipSprite();
         }
@@ -70,7 +69,7 @@ public class Player_Movement : MonoBehaviour {
         {
             movespeed = (int) (movespeed * crouchMod);
         }
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(MoveXAxis * movespeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveXAxis * movespeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
 
     //Allows the player to jump
@@ -80,7 +79,7 @@ public class Player_Movement : MonoBehaviour {
     }
     //Flips player sprite when changing directions, left and right.
 	void FlipSprite() {
-        playerDirectionR = !playerDirectionR;
+        playerDirectionRight = !playerDirectionRight;
         Vector2 direction = gameObject.transform.localScale;
         direction.x *= -1;
         transform.localScale = direction;
@@ -89,7 +88,7 @@ public class Player_Movement : MonoBehaviour {
     void Fire()
     {
         projectilePosition = transform.position;
-        if(playerDirectionR == true)
+        if(playerDirectionRight == true)
         {
             projectilePosition += new Vector2(+1f, -0.05f);
             Instantiate(projectileToRight, projectilePosition, Quaternion.identity);

@@ -21,7 +21,7 @@ public class WeaponScript : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-        endOfWeapon = transform.FindChild("EndOfWeapon");
+        endOfWeapon = transform.Find("EndOfWeapon");
         if (endOfWeapon == null)
         {
             Debug.LogError("endOfWeapon not found in WeaponScript..");
