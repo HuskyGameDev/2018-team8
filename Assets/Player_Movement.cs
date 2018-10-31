@@ -17,7 +17,7 @@ public class Player_Movement : MonoBehaviour {
     public int playerMovementSpeed = 10; //Change?
     public int playerJumpHeight = 10; //Change?
     public LayerMask mask;
-    public GameObject projectileToLeft, projectileToRight;
+    //public GameObject projectileToLeft, projectileToRight;
     Vector2 playerSize;
     Vector2 boxSize;
     Vector2 projectilePosition;
@@ -26,6 +26,8 @@ public class Player_Movement : MonoBehaviour {
     {
         playerSize = GetComponent<BoxCollider2D>().size;
         boxSize = new Vector2(playerSize.x, groundedSkin);
+        //projectileToLeft = Resources.Load("ProjectileToLeft);
+        //projectileToRight = Resources.Load("ProjectileToRight");
     }
     // Use this for initialization
     void Start () {
@@ -91,11 +93,11 @@ public class Player_Movement : MonoBehaviour {
         if(playerDirectionRight == true)
         {
             projectilePosition += new Vector2(+1f, -0.05f);
-            Instantiate(projectileToRight, projectilePosition, Quaternion.identity);
+            Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity);
         } else
         {
             projectilePosition += new Vector2(-1f, -0.05f);
-            Instantiate(projectileToLeft, projectilePosition, Quaternion.identity);
+            Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
         }
     }
 

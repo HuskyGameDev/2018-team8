@@ -19,6 +19,17 @@ public class NPC : MonoBehaviour {
         
     }
 
+    // Damage NPC With Bullet
+    void OnCollisionEnter2d (Collision2D col){
+        if(col.gameObject.tag.equals("Projectile"){
+            Destroy(col.gameObject);
+            health -= 2;
+            if(health <= 0){
+                Destroy(gameObject);
+            }
+        }
+    }
+
 }
 
 */
