@@ -1010,14 +1010,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d002127541b2b43b24ce837fa960d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crouching: 0
+  playerDirectionRight: 1
+  crouchMod: 0.2
+  fireRate: 0.05
+  groundedSkin: 0.05
+  moveXAxis: 0
+  moveYAxis: 0
   playerMovementSpeed: 10
   playerJumpHeight: 10
-  playerDirectionR: 1
-  MoveXAxis: 0
-  MoveYAxis: 0
-  crouchMod: 0.2
-  crouching: 0
-  groundedSkin: 0.05
   mask:
     serializedVersion: 2
     m_Bits: 1
