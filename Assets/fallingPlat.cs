@@ -5,6 +5,9 @@ using UnityEngine;
 public class fallingPlat : MonoBehaviour
 {
 
+   // GameObject myGameObject = new GameObject("Test Object");
+   // Rigidbody2D gameObjectsRigidBody2D = myGameObject.AddComponent<Rigidbody2D>();
+
     private Rigidbody2D plat;
     public float fallDelay = 2.0f;
 
