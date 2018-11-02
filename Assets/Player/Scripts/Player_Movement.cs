@@ -83,6 +83,7 @@ public class Player_Movement : MonoBehaviour {
     //Allows the player to jump
     void Jumping()
     {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpHeight, ForceMode2D.Impulse);       
     }
     //Flips player sprite when changing directions, left and right.
