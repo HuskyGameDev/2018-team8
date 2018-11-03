@@ -9,10 +9,21 @@ public class PlayerDeath : MonoBehaviour
     public int HP;
     public bool died;
 
+    public static PlayerDeath instace;
+
     // Use this for initialization
     void Start()
     {
         died = false;
+        instace = this;
+    }
+
+    void Update()
+    {
+      if(HP <= 0)
+        {
+            StartCoroutine("Death");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,7 +36,8 @@ public class PlayerDeath : MonoBehaviour
 
     void Death()
     {
-        SceneManager.LoadScene("SampleScene");
+        died = true;
+        SceneManager.LoadScene("JordanSampleScene");
     }
 
 }
