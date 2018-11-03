@@ -15,21 +15,17 @@ public class PlayerDeath : MonoBehaviour
         died = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.transform.position.y < -6)
-        {
-            died = true;
-        }
-        if (died == true)
+        if (collision.collider.CompareTag("Killer"))
         {
             StartCoroutine("Death");
         }
     }
+
     void Death()
     {
         SceneManager.LoadScene("SampleScene");
     }
-}
 
+}
