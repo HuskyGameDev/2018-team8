@@ -22,6 +22,9 @@ public class Player_Movement : MonoBehaviour {
     Vector2 boxSize;
     Vector2 projectilePosition;
 
+    //exists for powerups
+    public static Player_Movement instace;
+
     private void Awake()
     {
         playerSize = GetComponent<BoxCollider2D>().size;
@@ -31,7 +34,10 @@ public class Player_Movement : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-		// Nothing
+        // Nothing
+
+        //exists for powerups
+        instace = this;
 	}
 	
 	// Update is called once per frame
@@ -77,6 +83,7 @@ public class Player_Movement : MonoBehaviour {
     //Allows the player to jump
     void Jumping()
     {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpHeight, ForceMode2D.Impulse);       
     }
     //Flips player sprite when changing directions, left and right.
