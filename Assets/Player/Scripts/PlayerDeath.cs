@@ -37,7 +37,7 @@ public class PlayerDeath : MonoBehaviour
     void Death()
     {
         died = true;
-        SceneManager.LoadScene("JordanSampleScene");
+        SceneManager.LoadScene("TristanScene");
     }
 
 }
