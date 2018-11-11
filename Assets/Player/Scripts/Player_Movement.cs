@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour {
 
+    public bool charging = false;
     public bool crouching;
     public bool playerDirectionRight = true;
     bool grounded;
@@ -14,6 +15,7 @@ public class Player_Movement : MonoBehaviour {
     public float moveXAxis;
     public float moveYAxis;
     float nextFire = 0f;
+    public int chargeRate = 0;
     public int playerMovementSpeed = 10; //Change?
     public int playerJumpHeight = 10; //Change?
     public LayerMask mask;
@@ -43,7 +45,19 @@ public class Player_Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         PlayerMove();
-        if(Input.GetKeyDown(KeyCode.RightShift) && Time.time > nextFire)
+        if (Input.GetKey(KeyCode.Return))
+        {
+            charging = true;
+            chargeRate += 1;
+            if(Input.GetKeyDown(KeyCode.RightShift) && chargeRate >= 100){
+                FireCharged();
+                chargeRate = 0;
+            }
+        } else
+        {
+            charging = false;
+        }
+        if (Input.GetKeyDown(KeyCode.RightShift) && charging != true && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Fire();
@@ -105,6 +119,21 @@ public class Player_Movement : MonoBehaviour {
         {
             projectilePosition += new Vector2(-1f, -0.05f);
             Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
+        }
+    }
+
+    void FireCharged()
+    {
+        projectilePosition = transform.position;
+        if (playerDirectionRight == true)
+        {
+            projectilePosition += new Vector2(+1f, -0.05f);
+            Instantiate(Resources.Load("ProjectileToRightCharged"), projectilePosition, Quaternion.identity);
+        }
+        else
+        {
+            projectilePosition += new Vector2(-1f, -0.05f);
+            Instantiate(Resources.Load("ProjectileToLeftCharged"), projectilePosition, Quaternion.identity);
         }
     }
 
