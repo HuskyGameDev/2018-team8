@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerDeath : MonoBehaviour
 {
 
     public int HP;
     public bool died;
+    public Text healthUI;
 
-    public static PlayerDeath instace;
+    public static PlayerDeath instance;
 
     // Use this for initialization
     void Start()
     {
+        healthUI.text = "Health : " + HP;
         died = false;
-        instace = this;
+        instance = this;
     }
 
     void Update()
     {
-      if(HP <= 0)
+        healthUI.text = "Health : " + HP;
+        if (HP <= 0)
         {
             StartCoroutine("Death");
         }
@@ -37,7 +41,7 @@ public class PlayerDeath : MonoBehaviour
     void Death()
     {
         died = true;
-        SceneManager.LoadScene("TristanScene");
+        SceneManager.LoadScene("JordanSampleScene");
     }
 
 }
