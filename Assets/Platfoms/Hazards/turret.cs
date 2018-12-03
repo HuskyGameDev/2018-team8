@@ -7,12 +7,16 @@ public class turret : MonoBehaviour {
     public bool collide;
     public int fireRate = 0;
     public int maxFire = 20;
+    Transform player;
 	// Use this for initialization
 	void Start () {
 		
 	}
 
-
+    private void Awake()
+    {
+        this.player = transform.Find("Character Prototype (1)");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -49,7 +53,7 @@ public class turret : MonoBehaviour {
     {
         
         projectilePosition = transform.position;
-        projectilePosition += new Vector2(-1f, -0.05f);
+        projectilePosition += new Vector2(-1, .05f);
         Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
     }
 

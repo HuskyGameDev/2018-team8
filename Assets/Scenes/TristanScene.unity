@@ -292,7 +292,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.6740515, y: 0}
+  m_Offset: {x: -4.2623324, y: 1.100009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -303,7 +303,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.348103, y: 1}
+  m_Size: {x: 9.524665, y: 13.135563}
   m_EdgeRadius: 0
 --- !u!212 &74935301
 SpriteRenderer:
@@ -340,8 +340,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b7870aa205a27c46b78e8a2c3d7fc75, type: 3}
-  m_Color: {r: 0.3584906, g: 0.19232354, b: 0.05242079, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 16004f64dfba64b4286e2b42509a1643, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -969,7 +969,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.6740515, y: 0}
+  m_Offset: {x: -0.019586325, y: 2.6435647}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -980,7 +980,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.348103, y: 1}
+  m_Size: {x: 15.657032, y: 6.2871304}
   m_EdgeRadius: 0
 --- !u!212 &1554868885
 SpriteRenderer:
@@ -1192,6 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d002127541b2b43b24ce837fa960d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charging: 0
   crouching: 0
   playerDirectionRight: 1
   crouchMod: 0.2
@@ -1199,6 +1200,7 @@ MonoBehaviour:
   groundedSkin: 0.05
   moveXAxis: 0
   moveYAxis: 0
+  chargeRate: 0
   playerMovementSpeed: 10
   playerJumpHeight: 10
   mask:
@@ -1232,6 +1234,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 3
   died: 0
+  healthUI: {fileID: 0}
+  hit: 0
+  hitTimer: 0
 --- !u!1 &2125850457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1252,7 @@ GameObject:
   - component: {fileID: 2125850458}
   m_Layer: 0
   m_Name: Spike
-  m_TagString: Killer
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1368,7 +1373,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b7870aa205a27c46b78e8a2c3d7fc75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1eef494dfda8f64a841fdfa0b8ce603, type: 3}
   m_Color: {r: 0.8301887, g: 0.81060874, b: 0.81060874, a: 1}
   m_FlipX: 0
   m_FlipY: 0

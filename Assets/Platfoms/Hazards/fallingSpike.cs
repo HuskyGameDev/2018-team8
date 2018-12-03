@@ -20,15 +20,6 @@ public class fallingSpike : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("CharacterPrototype"))
-        {
-
-        } else
-        {
-            if (collision.collider.CompareTag("Ground"))
-            {
-                Destroy(gameObject);
-            }
-        }
+        Destroy(gameObject);
     }
 }

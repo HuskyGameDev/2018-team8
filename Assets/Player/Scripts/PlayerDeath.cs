@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class PlayerDeath : MonoBehaviour
 {
 
-    public int HP;
+    public int HP = 3;
     public bool died;
     public Text healthUI;
-
+    public bool hit;
+    public int hitTimer = 0;
     public static PlayerDeath instance;
 
     // Use this for initialization
@@ -36,12 +37,29 @@ public class PlayerDeath : MonoBehaviour
         {
             StartCoroutine("Death");
         }
+        if (collision.collider.CompareTag("Damage"))
+        {
+            if (!hit) { HP--;}
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (hit)
+        {
+            hitTimer++;
+        }
+        if(hitTimer > 60)
+        {
+            hit = false;
+            hitTimer = 0;
+        }
     }
 
     void Death()
     {
         died = true;
-        SceneManager.LoadScene("JordanSampleScene");
+        SceneManager.LoadScene("masterscene");
     }
 
 }
