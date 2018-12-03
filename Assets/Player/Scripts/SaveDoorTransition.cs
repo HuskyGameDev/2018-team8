@@ -11,7 +11,7 @@ public class SaveDoorTransition : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("Entered");
-        if (collision.gameObject.tag.Equals(thing) && Input.GetButtonDown("Interact"))
+        if (collision.gameObject.name.Equals(thing) && Input.GetButtonDown("Interact"))
         {
             SceneManager.LoadScene(level);
         }
