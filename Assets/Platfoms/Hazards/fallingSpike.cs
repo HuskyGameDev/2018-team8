@@ -23,6 +23,12 @@ public class fallingSpike : MonoBehaviour {
         if (collision.gameObject.name.Equals("CharacterPrototype"))
         {
 
+        } else
+        {
+            if (collision.collider.CompareTag("Ground"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
