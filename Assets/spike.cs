@@ -9,6 +9,7 @@ public class spike : MonoBehaviour
     public int damage = 1;
     // public int speed_increase = 25;
     //private int std_speed = 0;
+    //GameObject player = FindGameObjectsWithTag("Player");
     void Start()
     {
 
@@ -27,6 +28,6 @@ public class spike : MonoBehaviour
     void damager()
     {
         //std_speed = Player_Movement.instace.playerMovementSpeed;
-        PlayerDeath.instace.HP -= damage;
+        PlayerDeath.instance.HP -= damage;
     }
 }

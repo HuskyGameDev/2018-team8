@@ -24,7 +24,7 @@ public class turret : MonoBehaviour {
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+   /* private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.name.Equals("CharacterPrototype (1)"))
         {
@@ -36,7 +36,7 @@ public class turret : MonoBehaviour {
             }
         }
     }
-
+    */
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.name.Equals("CharacterPrototype (1)")) {
@@ -44,7 +44,7 @@ public class turret : MonoBehaviour {
             Debug.Log("Exit");
         }
     }
-
+    
     void Fire()
     {
         
