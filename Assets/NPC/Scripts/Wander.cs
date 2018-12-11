@@ -6,26 +6,29 @@ public class Wander : MonoBehaviour {
 
     public float speed;
 
-    private bool movingRight = true;
+    Transform waypoint1, waypoint2, destination;
 
-    public Transform groundDetection;
+    private void Start() {
+        destination = waypoint1;
+    }
 
     private void Update() {
 
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        this.transform.position = Vector3.Lerp(this.transform.position, destination.position, Time.deltaTime * speed);
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 2f);
+        var distance = Vector3.Distance(this.transform.position, destination.position);
 
-        if (groundInfo.collider == false) {
-            if(movingRight) {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingRight = false;
-            }
-            else {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                movingRight = true;
-            }
+        if(distance < 1) {
+            destination = waypoint2;
+            transform.eulerAngles = new Vector3(0, 0, 0);
+
         }
+        else {
+            destination = waypoint1;
+            transform.eulerAngles = new Vector3(0, 180, 0);
+
+        }
+        
         
     }
 }

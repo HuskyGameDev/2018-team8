@@ -18,11 +18,13 @@ public class NPCAttackMode : MonoBehaviour {
 
         
 
-        RaycastHit2D playerInfo = Physics2D.Raycast(playerDetection.position, Vector2.left, 3f);
+        Vector3 direction = target.position - transform.position;
 
-        if (playerInfo.collider == true)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        float distance = direction.sqrMagnitude, dot = Vector3.Dot(transform.forward, direction.normalized);
+
+        if (distance < 16 && Mathf.Abs(1 - dot) < .45f) {
+
+            transform.position += direction.normalized * speed * Time.deltaTime;
         }
     }
 }
