@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class turret : MonoBehaviour {
     Vector2 projectilePosition;
+    Vector3 playerPos;
     public bool collide;
     public int fireRate = 0;
     public int maxFire = 20;
-    Transform player;
+    GameObject player;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,8 +16,14 @@ public class turret : MonoBehaviour {
 
     private void Awake()
     {
-        this.player = transform.Find("Character Prototype (1)");
+        player = GameObject.Find("CharacterPrototype (1)");
     }
+
+    private void Update()
+    {
+        playerPos = player.transform.position;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -53,8 +60,20 @@ public class turret : MonoBehaviour {
     {
         
         projectilePosition = transform.position;
-        projectilePosition += new Vector2(-1, .05f);
-        Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
+        if(playerPos.x < (projectilePosition.x - 2))
+        {
+            projectilePosition += new Vector2(-1f, 0f);
+        } else if (playerPos.x > (projectilePosition.x + 2))
+        {
+            projectilePosition += new Vector2(1f, 0f);
+        } else if ((playerPos.x <= (projectilePosition.x + 2) && playerPos.x >= (projectilePosition.x - 2)) && playerPos.y > projectilePosition.y)
+        {
+            projectilePosition += new Vector2(0f, 1f);
+        } else if ((playerPos.x <= (projectilePosition.x + 2) && playerPos.x >= (projectilePosition.x - 2)) && playerPos.y <= projectilePosition.y)
+        {
+            projectilePosition += new Vector2(0f, -1f);
+        }
+    Instantiate(Resources.Load("ProjectileTurret"), projectilePosition, Quaternion.identity);
     }
 
     private void FixedUpdate()
