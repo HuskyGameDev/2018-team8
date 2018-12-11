@@ -7,7 +7,7 @@ public class Player_Movement : MonoBehaviour {
     public bool charging = false;
     public bool crouching;
     public bool playerDirectionRight = true;
-    bool grounded;
+    public bool grounded;
     bool jumping;
     public double crouchMod = .2;
     public float fireRate = 0.05f;

@@ -30,7 +30,7 @@ public class WeaponScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        playerPos = player.transform.position;
+        //playerPos = player.transform.position;
         if (speedOfFire == 0)
         {
             if(Input.GetKeyDown(KeyCode.RightShift))
