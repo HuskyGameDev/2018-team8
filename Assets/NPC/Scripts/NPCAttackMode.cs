@@ -17,7 +17,7 @@ public class NPCAttackMode : MonoBehaviour {
     }
     private void Update() {
 
-        transform.LookAt(target);
+        
 
         if (Vector3.Distance(transform.position, target.position) <= minDistance)
         {

@@ -14,7 +14,7 @@ public class Wander : MonoBehaviour {
     }
 
     private void Update() {
-        if (attack = false)
+        if (attack == false)
         {
             this.transform.position = Vector3.Lerp(this.transform.position, destination.position, Time.deltaTime * speed);
 
