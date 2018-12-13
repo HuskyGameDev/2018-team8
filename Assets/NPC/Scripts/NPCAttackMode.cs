@@ -5,9 +5,10 @@ using UnityEngine;
 public class NPCAttackMode : MonoBehaviour {
 
     public float speed;
+    public float minDistance;
+    public float minAttackDistance;
 
-    public Transform target;
-    public Transform playerDetection;
+    Transform target;
 
 
     private void Start()
@@ -16,15 +17,17 @@ public class NPCAttackMode : MonoBehaviour {
     }
     private void Update() {
 
-        
+        transform.LookAt(target);
 
-        Vector3 direction = target.position - transform.position;
+        if (Vector3.Distance(transform.position, target.position) <= minDistance)
+        {
+            Wander.attack = true;
+            transform.position += transform.forward * speed * Time.deltaTime;
 
-        float distance = direction.sqrMagnitude, dot = Vector3.Dot(transform.forward, direction.normalized);
-
-        if (distance < 16 && Mathf.Abs(1 - dot) < .45f) {
-
-            transform.position += direction.normalized * speed * Time.deltaTime;
+            if(Vector3.Distance(transform.position, target.position) <= minAttackDistance)
+            {
+                 //insert attack function here
+            }
         }
     }
 }

@@ -731,10 +731,8 @@ MonoBehaviour:
   platform: {fileID: 0}
   speed: 0
   startpoint: {fileID: 0}
-  points:
-  - {fileID: 1854911416}
-  - {fileID: 1393425403}
-  nextpoint: 1
+  points: []
+  nextpoint: 0
 --- !u!61 &171934933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1068,7 +1066,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 205062192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46e056ed409383f49b7f996a3795f3c5, type: 3}
+  m_Script: {fileID: 11500000, guid: a8de8b3b7233c0449a101bbe561a8062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!124 &205062194
@@ -2603,7 +2601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 3
   died: 0
-  healthUI: {fileID: 79672028}
+  healthUI: {fileID: 0}
   hit: 0
   hitTimer: 0
 --- !u!114 &858651863
@@ -2617,7 +2615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36adafa2ec5ea674ca08f0c13703b6dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 20
+  dashSpeed: 10
   dashCount: 0
   MoveXAxis: 0
   dashDir: 1
@@ -2646,7 +2644,7 @@ MonoBehaviour:
   playerJumpHeight: 10
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
 --- !u!61 &858651865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2983,13 +2981,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680f26a15942f85459c71cfdea7649d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 884519176}
-  speed: 2
+  platform: {fileID: 0}
+  speed: 0
   startpoint: {fileID: 0}
-  points:
-  - {fileID: 2117682140}
-  - {fileID: 1121428049}
-  nextpoint: 1
+  points: []
+  nextpoint: 0
 --- !u!61 &884519178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5187,7 +5183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc714ee8d7faaf14cb50eaa4e84a6af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 954549241}
+  score: {fileID: 0}
   points: 0
 --- !u!114 &1583913001
 MonoBehaviour:
@@ -5320,8 +5316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cd41f1518547642961a72ceba91b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: SaveHouse
-  thing: CharacterPrototype
+  level: 
+  thing: 
 --- !u!212 &1636721564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6645,8 +6641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cd41f1518547642961a72ceba91b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: SaveHouse
-  thing: CharacterPrototype (1)
+  level: 
+  thing: 
 --- !u!61 &1951319716
 BoxCollider2D:
   m_ObjectHideFlags: 0
