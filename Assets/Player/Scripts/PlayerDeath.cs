@@ -13,6 +13,7 @@ public class PlayerDeath : MonoBehaviour
     public bool hit;
     public int hitTimer = 0;
     public static PlayerDeath instance;
+    [SerializeField] private string LevelOfDeath;
 
     // Use this for initialization
     void Start()
@@ -59,7 +60,7 @@ public class PlayerDeath : MonoBehaviour
     void Death()
     {
         died = true;
-        SceneManager.LoadScene("masterscene");
+        SceneManager.LoadScene(LevelOfDeath);
     }
 
 }

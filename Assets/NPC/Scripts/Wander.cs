@@ -6,6 +6,7 @@ public class Wander : MonoBehaviour {
 
     public float speed;
     public static bool attack = false;
+    public Transform[] points;
 
     public Transform waypoint1, waypoint2, destination;
 
@@ -25,13 +26,13 @@ public class Wander : MonoBehaviour {
                 if (destination == waypoint1)
                 {
                     destination = waypoint2;
-                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    transform.eulerAngles = new Vector3(0, 180, 0);
                 }
 
                 else
                 {
                     destination = waypoint1;
-                    transform.eulerAngles = new Vector3(0, 180, 0);
+                    transform.eulerAngles = new Vector3(0, 0, 0);
                 }
             }
         }

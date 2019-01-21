@@ -610,7 +610,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46e056ed409383f49b7f996a3795f3c5, type: 3}
+  m_Script: {fileID: 11500000, guid: a8de8b3b7233c0449a101bbe561a8062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &563987103
@@ -2089,6 +2089,7 @@ MonoBehaviour:
   charging: 0
   crouching: 0
   playerDirectionRight: 1
+  grounded: 0
   crouchMod: 0.2
   fireRate: 0.05
   groundedSkin: 0.05
@@ -2129,6 +2130,8 @@ MonoBehaviour:
   HP: 3
   died: 0
   healthUI: {fileID: 651099193}
+  hit: 0
+  hitTimer: 0
 --- !u!1 &1749737926
 GameObject:
   m_ObjectHideFlags: 0
