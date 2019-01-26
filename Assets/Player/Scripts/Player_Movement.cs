@@ -18,7 +18,7 @@ public class Player_Movement : MonoBehaviour {
     public int chargeRate = 0;
     public int playerMovementSpeed = 10; //Change?
     public int playerJumpHeight = 10; //Change?
-    public LayerMask mask;
+    public LayerMask mask = 0;
     //public GameObject projectileToLeft, projectileToRight;
     Vector2 playerSize;
     Vector2 boxSize;

@@ -7,7 +7,7 @@ public class turret : MonoBehaviour {
     Vector3 playerPos;
     public bool collide;
     public int fireRate = 0;
-    public int maxFire = 20;
+    public int maxFire = 60;
     GameObject player;
 	// Use this for initialization
 	void Start () {
@@ -62,14 +62,14 @@ public class turret : MonoBehaviour {
         projectilePosition = transform.position;
         if(playerPos.x < (projectilePosition.x - 2))
         {
-            projectilePosition += new Vector2(-1f, 0f);
+           projectilePosition += new Vector2(-1f, 0f);
         } else if (playerPos.x > (projectilePosition.x + 2))
         {
             projectilePosition += new Vector2(1f, 0f);
-        } else if ((playerPos.x <= (projectilePosition.x + 2) && playerPos.x >= (projectilePosition.x - 2)) && playerPos.y > projectilePosition.y)
+        } else if ((playerPos.x <= (projectilePosition.x - 2) && playerPos.x >= (projectilePosition.x + 2)) && playerPos.y >= projectilePosition.y)
         {
             projectilePosition += new Vector2(0f, 1f);
-        } else if ((playerPos.x <= (projectilePosition.x + 2) && playerPos.x >= (projectilePosition.x - 2)) && playerPos.y <= projectilePosition.y)
+        } else if ((playerPos.x <= (projectilePosition.x - 2) && playerPos.x >= (projectilePosition.x + 2)) && playerPos.y <= projectilePosition.y)
         {
             projectilePosition += new Vector2(0f, -1f);
         }
@@ -85,10 +85,13 @@ public class turret : MonoBehaviour {
             {
                 Fire();
             }
+        } else
+        {
+            fireRate = 0;
         }
 
             fireRate++;
-            if (fireRate > 20)
+            if (fireRate > maxFire)
             {
                 fireRate = 0;
             }

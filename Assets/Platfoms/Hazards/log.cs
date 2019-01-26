@@ -17,6 +17,14 @@ public class log : MonoBehaviour {
             hit = true;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Killer"))
+        {
+            Destroy(gameObject);
+        }
+    }
     // Update is called once per frame
     void FixedUpdate () {
         if (hit)

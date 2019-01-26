@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class camzoomout : MonoBehaviour
 {
 
@@ -36,3 +36,4 @@ public class camzoomout : MonoBehaviour
 
     }
 }
+*/
