@@ -31,12 +31,32 @@ public class ProjectileScript : MonoBehaviour {
             rigidbody.velocity *= 0.5f;
             Destroy(gameObject, 3f);
         }
-        else
+        else if (velocityY == 0)
         {
             rigidbody.velocity = new Vector2(velocityX, velocityY);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 3f);
         }
-	}
+        else if (velocityY == 1)
+        {
+            rigidbody.velocity = new Vector2(velocityX, velocityY);
+            Destroy(gameObject, 3f);
+        }
+        else if (velocityY == 2)
+        {
+            rigidbody.velocity = new Vector2(velocityX, velocityY);
+            Destroy(gameObject, 3f);
+        }
+        else if (velocityY == -1)
+        {
+            rigidbody.velocity = new Vector2(velocityX, velocityY);
+            Destroy(gameObject, 3f);
+        }
+        else if (velocityY == -2)
+        {
+            rigidbody.velocity = new Vector2(velocityX, velocityY);
+            Destroy(gameObject, 3f);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

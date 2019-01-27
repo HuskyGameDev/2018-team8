@@ -16,6 +16,7 @@ public class Player_Movement : MonoBehaviour {
     public float moveYAxis;
     float nextFire = 0f;
     public int chargeRate = 0;
+    public int multishotCount = 0;
     public int playerMovementSpeed = 10; //Change?
     public int playerJumpHeight = 10; //Change?
     public LayerMask mask = 0;
@@ -41,15 +42,15 @@ public class Player_Movement : MonoBehaviour {
         //exists for powerups
         instace = this;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         PlayerMove();
         if (Input.GetKey(KeyCode.Return))
         {
             charging = true;
             chargeRate += 1;
-            if(Input.GetKeyDown(KeyCode.RightShift) && chargeRate >= 100){
+            if (Input.GetKeyDown(KeyCode.RightShift) && chargeRate >= 100) {
                 FireCharged();
                 chargeRate = 0;
             }
@@ -61,6 +62,12 @@ public class Player_Movement : MonoBehaviour {
         {
             nextFire = Time.time + fireRate;
             Fire();
+        }
+        if (Input.GetKeyDown(KeyCode.RightShift) && (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && multishotCount >= 1)
+        {
+            nextFire = Time.time + fireRate;
+            FireMulti();
+            multishotCount--;
         }
     }
 
@@ -134,6 +141,47 @@ public class Player_Movement : MonoBehaviour {
         {
             projectilePosition += new Vector2(-1f, -0.05f);
             Instantiate(Resources.Load("ProjectileToLeftCharged"), projectilePosition, Quaternion.identity);
+        }
+    }
+
+    void FireMulti()
+    {
+        projectilePosition = transform.position;
+        if (playerDirectionRight == true)
+        {
+            projectilePosition += new Vector2(+1f, -0.05f);
+            Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, 0.45f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot 1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, -0.55f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot -1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, 0.95f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot 2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, -1.05f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot -2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+        }
+        else
+        {
+            projectilePosition += new Vector2(-1f, -0.05f);
+            Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, 0.45f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot 1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, -0.55f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot -1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, 0.95f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot 2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, -1.05f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot -2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
         }
     }
 
