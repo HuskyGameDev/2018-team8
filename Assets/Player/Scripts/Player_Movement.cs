@@ -10,15 +10,17 @@ public class Player_Movement : MonoBehaviour {
     public bool grounded;
     bool jumping;
     public double crouchMod = .2;
+    public float bulletHeight = -0.05f;
     public float fireRate = 0.05f;
     public float groundedSkin = .05f;
     public float moveXAxis;
     public float moveYAxis;
     float nextFire = 0f;
     public int chargeRate = 0;
+    public int multishotCount = 0;
     public int playerMovementSpeed = 10; //Change?
     public int playerJumpHeight = 10; //Change?
-    public LayerMask mask;
+    public LayerMask mask = 0;
     //public GameObject projectileToLeft, projectileToRight;
     Vector2 playerSize;
     Vector2 boxSize;
@@ -41,15 +43,15 @@ public class Player_Movement : MonoBehaviour {
         //exists for powerups
         instace = this;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         PlayerMove();
         if (Input.GetKey(KeyCode.Return))
         {
             charging = true;
             chargeRate += 1;
-            if(Input.GetKeyDown(KeyCode.RightShift) && chargeRate >= 100){
+            if (Input.GetKeyDown(KeyCode.RightShift) && chargeRate >= 100) {
                 FireCharged();
                 chargeRate = 0;
             }
@@ -57,10 +59,23 @@ public class Player_Movement : MonoBehaviour {
         {
             charging = false;
         }
-        if (Input.GetKeyDown(KeyCode.RightShift) && charging != true && Time.time > nextFire)
+        if (Input.GetKeyDown(KeyCode.RightShift) && !(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && charging != true && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Fire();
+        }
+        if (Input.GetKeyDown(KeyCode.RightShift) && (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)))
+        {
+            if (multishotCount >= 1)
+            {
+                nextFire = Time.time + fireRate;
+                FireMulti();
+                multishotCount--;
+            } else
+            {
+                nextFire = Time.time + fireRate;
+                Fire();
+            }
         }
     }
 
@@ -75,9 +90,11 @@ public class Player_Movement : MonoBehaviour {
         if (Input.GetButton("Crouch"))
         {
             crouching = true;
+            bulletHeight = -0.20f;
         } else
         {
             crouching = false;
+            bulletHeight = -0.00f;
         }
         if (moveXAxis > 0.0f && playerDirectionRight == false)
         {
@@ -113,11 +130,11 @@ public class Player_Movement : MonoBehaviour {
         projectilePosition = transform.position;
         if(playerDirectionRight == true)
         {
-            projectilePosition += new Vector2(+1f, -0.05f);
+            projectilePosition += new Vector2(+1f, bulletHeight);
             Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity);
         } else
         {
-            projectilePosition += new Vector2(-1f, -0.05f);
+            projectilePosition += new Vector2(-1f, bulletHeight);
             Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
         }
     }
@@ -127,13 +144,55 @@ public class Player_Movement : MonoBehaviour {
         projectilePosition = transform.position;
         if (playerDirectionRight == true)
         {
-            projectilePosition += new Vector2(+1f, -0.05f);
+            projectilePosition += new Vector2(+1f, bulletHeight);
             Instantiate(Resources.Load("ProjectileToRightCharged"), projectilePosition, Quaternion.identity);
         }
         else
         {
-            projectilePosition += new Vector2(-1f, -0.05f);
+            projectilePosition += new Vector2(-1f, bulletHeight);
             Instantiate(Resources.Load("ProjectileToLeftCharged"), projectilePosition, Quaternion.identity);
+        }
+    }
+
+    void FireMulti()
+    {
+        if (playerDirectionRight == true)
+        {
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, bulletHeight);
+            Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, bulletHeight + 0.1f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot 1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, bulletHeight - 0.1f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot -1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, bulletHeight + 0.2f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot 2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(+1f, bulletHeight - 0.2f);
+            Instantiate(Resources.Load("ProjectileToRight(Multishot -2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+        }
+        else
+        {
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, bulletHeight);
+            Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, bulletHeight + 0.1f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot 1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, bulletHeight - 0.1f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot -1)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, bulletHeight + 0.2f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot 2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, bulletHeight - 0.2f);
+            Instantiate(Resources.Load("ProjectileToLeft(Multishot -2)"), projectilePosition, Quaternion.identity);
+            projectilePosition = transform.position;
         }
     }
 

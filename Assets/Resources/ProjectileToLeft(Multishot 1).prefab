@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 58317277643460612}
   - component: {fileID: 114339806923210128}
   m_Layer: 0
-  m_Name: ProjectileToLeft
+  m_Name: ProjectileToLeft(Multishot 1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,4 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocityX: -11
-  velocityY: 0
+  velocityY: 1
