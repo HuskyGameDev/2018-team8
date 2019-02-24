@@ -267,6 +267,7 @@ MonoBehaviour:
   moveSpeed: 4
   acceleration: 0.25
   triggered: 0
+  facingRight: 0
 --- !u!61 &74935299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -356,7 +357,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 16004f64dfba64b4286e2b42509a1643, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3086302896ed3145879b04c1a432366, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
