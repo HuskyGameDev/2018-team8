@@ -16,7 +16,7 @@ public class WeaponScript : MonoBehaviour {
 
     private void Start()
     {
-        player = GameObject.Find("CharacterPrototype (1)");
+        //player = GameObject.Find();
     }
 
     // Use this for initialization
@@ -29,7 +29,7 @@ public class WeaponScript : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate() {
         //playerPos = player.transform.position;
         if (speedOfFire == 0)
         {
