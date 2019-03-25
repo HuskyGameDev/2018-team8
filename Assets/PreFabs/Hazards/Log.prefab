@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3517446596234281570}
   - component: {fileID: 6598233132876040670}
   - component: {fileID: 6598233132876040669}
-  - component: {fileID: 6598233132876040664}
+  - component: {fileID: 4822188521237288121}
   m_Layer: 0
   m_Name: Log
   m_TagString: Damage
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6598233132876040664
+--- !u!114 &4822188521237288121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,14 +155,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6598233132876040667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b9669e96494fce458f870b4ea09e606, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f3a11e3c00bbad4799c0291127388cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderTime: 90
-  frameCount: 0
-  idleTime: 20
-  moveSpeed: 4
-  acceleration: 0.25
-  triggered: 0
-  facingRight: 0
-  flip: 1
+  rollSpeed: -3
