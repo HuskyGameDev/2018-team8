@@ -14,8 +14,10 @@ public class simpleEnemy : MonoBehaviour
     public int moveSpeed = 4;   
     public float acceleration = .33f;
     public bool triggered;
-    float direction;
+    float direction = 1;
     public bool facingRight;
+    public bool spriteRight;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -92,10 +94,12 @@ public class simpleEnemy : MonoBehaviour
             if (direction < 0)
             {
                 direction = -1;
+                facingRight = false;
             }
             else
             {
                 direction = 1;
+                facingRight = true;
             }
         }
 
@@ -116,8 +120,7 @@ public class simpleEnemy : MonoBehaviour
 
     //Flips player sprite when changing directions, left and right.
     void FlipSprite()
-    {
-        facingRight = !facingRight;
+    { 
         Vector2 direction = gameObject.transform.localScale;
         direction.x *= -1;
         transform.localScale = direction;
@@ -127,14 +130,17 @@ public class simpleEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(direction == 1 && !facingRight)
+
+        if (facingRight && !spriteRight)
         {
-            FlipSprite();
+                FlipSprite();
+            spriteRight = true;
         }
 
-        if(direction == -1 && facingRight)
+        if (!facingRight && spriteRight)
         {
-            FlipSprite();
+                FlipSprite();
+            spriteRight = false;
         }
         //If player is within the trigger zone, follow the player
         if (triggered && frameCount < wanderTime)
