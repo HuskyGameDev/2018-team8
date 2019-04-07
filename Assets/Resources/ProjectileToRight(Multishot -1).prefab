@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5603105388032273357}
   m_Layer: 0
   m_Name: ProjectileToRight(Multishot -1)
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +234,7 @@ TrailRenderer:
 --- !u!199 &2990415749880586251
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

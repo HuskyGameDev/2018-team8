@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6749613141744320621}
   m_Layer: 0
   m_Name: ProjectileToLeft
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4839,7 +4839,7 @@ ParticleSystem:
 --- !u!199 &6749613141744320621
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
