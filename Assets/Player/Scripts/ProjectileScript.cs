@@ -10,15 +10,12 @@ public class ProjectileScript : MonoBehaviour {
     Vector2 bullet;
     GameObject player;
     Vector3 playerPos;
-    ParticleSystem spark;
-    
+
     // Use this for initialization
     void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
         bullet = this.gameObject.transform.position;
-        spark = GetComponent<ParticleSystem>();
-        spark.enableEmission = false;
-    }
+	}
 
     private void Awake()
     {
@@ -63,11 +60,6 @@ public class ProjectileScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        rigidbody.velocity = Vector2.zero;
-        rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-        spark.enableEmission = true;
-        gameObject.GetComponent<Renderer>().enabled = false;
-        gameObject.transform.localScale = new Vector3(0.00001f, 0.00001f, 0.00001f);
-        Destroy(gameObject, 0.25f);
+        Destroy(gameObject);
     }
 }
