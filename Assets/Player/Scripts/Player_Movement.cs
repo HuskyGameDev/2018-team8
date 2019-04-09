@@ -16,6 +16,7 @@ public class Player_Movement : MonoBehaviour {
     public float moveXAxis;
     public float moveYAxis;
     float nextFire = 0f;
+    public int directionState = 4; // Begin shooting pointed to right
     public int chargeRate = 0;
     public int multishotCount = 0;
     public int playerMovementSpeed = 10; //Change?
@@ -47,11 +48,114 @@ public class Player_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         PlayerMove();
-        if (Input.GetKey(KeyCode.Return))
+        
+        // Projectile Directions
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Up Only
+            directionState = 1;
+        }
+        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Left Only
+            directionState = 2;
+        }
+        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Down Only
+            directionState = 3;
+        }
+        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Right Only
+            directionState = 4;
+        }
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Up and Left
+            directionState = 5;
+        }
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Up and Right
+            directionState = 6;
+        }
+        else if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Down and Left
+            directionState = 7;
+        }
+        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //Down and Right
+            directionState = 8;
+        }
+
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //WAS Only
+            //Left Only
+            directionState = 2;
+        }
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //WAD Only
+            //Up Only
+            directionState = 1;
+        }
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //WSD Only
+            //Right Only
+            directionState = 4;
+        }
+        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //ASD Only
+            //Down Only
+            directionState = 3;
+        }
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+        {
+            //All Keys Pressed
+            //Do Nothing
+        }
+
+        if (Input.GetKey(KeyCode.RightShift))
+        {
+            chargeRate += 1;
+        }
+        else
+        {
+            if (chargeRate > 100)
+            {
+                chargeRate = 0;
+                FireCharged();
+            }
+
+            if (chargeRate > 0 && chargeRate <= 100)
+            {
+                chargeRate = 0;
+                nextFire = Time.time + fireRate;
+                Fire();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (multishotCount >= 1)
+            {
+                multishotCount--;
+                nextFire = Time.time + fireRate;
+                FireMulti();
+            }
+        }
+
+        /*if (Input.GetKey(KeyCode.Return))
         {
             charging = true;
             chargeRate += 1;
-            if (Input.GetKeyDown(KeyCode.RightShift) && chargeRate >= 100) {
+            if (Input.GetKey(KeyCode.RightShift) && chargeRate >= 100) {
                 FireCharged();
                 chargeRate = 0;
             }
@@ -59,12 +163,12 @@ public class Player_Movement : MonoBehaviour {
         {
             charging = false;
         }
-        if (Input.GetKeyDown(KeyCode.RightShift) && !(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && charging != true && Time.time > nextFire)
+        if (Input.GetKey(KeyCode.RightShift) && !(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && charging != true && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Fire();
         }
-        if (Input.GetKeyDown(KeyCode.RightShift) && (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)))
+        if (Input.GetKey(KeyCode.RightShift) && (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)))
         {
             if (multishotCount >= 1)
             {
@@ -76,7 +180,7 @@ public class Player_Movement : MonoBehaviour {
                 nextFire = Time.time + fireRate;
                 Fire();
             }
-        }
+        }*/
     }
 
 	//Holds movement controls, animations, character physics
@@ -128,7 +232,50 @@ public class Player_Movement : MonoBehaviour {
     void Fire()
     {
         projectilePosition = transform.position;
-        if(playerDirectionRight == true)
+
+        if(directionState == 1) //Up
+        {
+            projectilePosition += new Vector2(0f, 1f);
+            Instantiate(Resources.Load("ProjectileToSky"), projectilePosition, Quaternion.identity);
+        }
+        else if (directionState == 2) //Left
+        {
+            projectilePosition += new Vector2(-1f, 0f);
+            Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
+        }
+        else if (directionState == 3) //Down
+        {
+            projectilePosition += new Vector2(0f, -1f);
+            Instantiate(Resources.Load("ProjectileToGround"), projectilePosition, Quaternion.identity);
+        }
+        else if (directionState == 4) //Right
+        {
+            projectilePosition += new Vector2(+1f, 0f);
+            Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity);
+        }
+        else if (directionState == 5) //Up, Left
+        {
+            projectilePosition += new Vector2(-1f, +1f);
+            Instantiate(Resources.Load("ProjectileToLeftSky"), projectilePosition, Quaternion.identity);
+        }
+        else if (directionState == 6) //Up, Right
+        {
+            projectilePosition += new Vector2(+1f, +1f);
+            Instantiate(Resources.Load("ProjectileToRightSky"), projectilePosition, Quaternion.identity);
+        }
+        else if (directionState == 7) //Down, Left
+        {
+            projectilePosition += new Vector2(-1f, -1f);
+            Instantiate(Resources.Load("ProjectileToLeftGround"), projectilePosition, Quaternion.identity);
+        }
+        else if (directionState == 8) //Down, Right
+        {
+            projectilePosition += new Vector2(+1f, -1f);
+            Instantiate(Resources.Load("ProjectileToRightGround"), projectilePosition, Quaternion.identity);
+        }
+
+
+        /*if(playerDirectionRight == true)
         {
             projectilePosition += new Vector2(+1f, bulletHeight);
             Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity);
@@ -136,63 +283,218 @@ public class Player_Movement : MonoBehaviour {
         {
             projectilePosition += new Vector2(-1f, bulletHeight);
             Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
-        }
+        }*/
     }
-
+    
     void FireCharged()
     {
         projectilePosition = transform.position;
-        if (playerDirectionRight == true)
+
+        if (directionState == 1) //Up
         {
-            projectilePosition += new Vector2(+1f, bulletHeight);
-            Instantiate(Resources.Load("ProjectileToRightCharged"), projectilePosition, Quaternion.identity);
+            projectilePosition += new Vector2(0f, 1f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
         }
-        else
+        else if (directionState == 2) //Left
         {
-            projectilePosition += new Vector2(-1f, bulletHeight);
-            Instantiate(Resources.Load("ProjectileToLeftCharged"), projectilePosition, Quaternion.identity);
+            projectilePosition += new Vector2(-1f, 0f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
+        }
+        else if (directionState == 3) //Down
+        {
+            projectilePosition += new Vector2(0f, -1f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
+        }
+        else if (directionState == 4) //Right
+        {
+            projectilePosition += new Vector2(+1f, 0f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
+        }
+        else if (directionState == 5) //Up, Left
+        {
+            projectilePosition += new Vector2(-1f, +1f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToLeftSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
+        }
+        else if (directionState == 6) //Up, Right
+        {
+            projectilePosition += new Vector2(+1f, +1f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToRightSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
+        }
+        else if (directionState == 7) //Down, Left
+        {
+            projectilePosition += new Vector2(-1f, -1f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToLeftGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
+        }
+        else if (directionState == 8) //Down, Right
+        {
+            projectilePosition += new Vector2(+1f, -1f);
+            GameObject projectile = Instantiate(Resources.Load("ProjectileToRightGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.GetComponent<TrailRenderer>().startWidth = 0.3f;
+            projectile.GetComponent<TrailRenderer>().endWidth = 0.1f;
         }
     }
 
     void FireMulti()
     {
-        if (playerDirectionRight == true)
+        projectilePosition = transform.position;
+
+        if (directionState == 1) //Up
         {
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(+1f, bulletHeight);
-            Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(+1f, bulletHeight + 0.1f);
-            Instantiate(Resources.Load("ProjectileToRight(Multishot 1)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(+1f, bulletHeight - 0.1f);
-            Instantiate(Resources.Load("ProjectileToRight(Multishot -1)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(+1f, bulletHeight + 0.2f);
-            Instantiate(Resources.Load("ProjectileToRight(Multishot 2)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(+1f, bulletHeight - 0.2f);
-            Instantiate(Resources.Load("ProjectileToRight(Multishot -2)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
+            projectilePosition += new Vector2(0f, 1f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(-0.1f, 0f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityX = -0.25f;
+            projectilePosition += new Vector2(-0.1f, 0f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityX = -0.5f;
+            projectilePosition += new Vector2(0.3f, 0f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityX = 0.25f;
+            projectilePosition += new Vector2(0.1f, 0f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityX = 0.5f;
         }
-        else
+        else if (directionState == 2) //Left
         {
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(-1f, bulletHeight);
-            Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(-1f, bulletHeight + 0.1f);
-            Instantiate(Resources.Load("ProjectileToLeft(Multishot 1)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(-1f, bulletHeight - 0.1f);
-            Instantiate(Resources.Load("ProjectileToLeft(Multishot -1)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(-1f, bulletHeight + 0.2f);
-            Instantiate(Resources.Load("ProjectileToLeft(Multishot 2)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
-            projectilePosition += new Vector2(-1f, bulletHeight - 0.2f);
-            Instantiate(Resources.Load("ProjectileToLeft(Multishot -2)"), projectilePosition, Quaternion.identity);
-            projectilePosition = transform.position;
+            projectilePosition += new Vector2(-1f, 0f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(0f, -0.1f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityY = -0.25f;
+            projectilePosition += new Vector2(0f, -0.1f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityY = -0.5f;
+            projectilePosition += new Vector2(0f, 0.3f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityY = 0.25f;
+            projectilePosition += new Vector2(0f, 0.1f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToLeft"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityY = 0.5f;
+        }
+        else if (directionState == 3) //Down
+        {
+            projectilePosition += new Vector2(0f, -1f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(-0.1f, 0f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityX = -0.25f;
+            projectilePosition += new Vector2(-0.1f, 0f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityX = -0.5f;
+            projectilePosition += new Vector2(0.3f, 0f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityX = 0.25f;
+            projectilePosition += new Vector2(0.1f, 0f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityX = 0.5f;
+        }
+        else if (directionState == 4) //Right
+        {
+            projectilePosition += new Vector2(1f, 0f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(0f, -0.1f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityY = -0.25f;
+            projectilePosition += new Vector2(0f, -0.1f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityY = -0.5f;
+            projectilePosition += new Vector2(0f, 0.3f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityY = 0.25f;
+            projectilePosition += new Vector2(0f, 0.1f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToRight"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityY = 0.5f;
+        }
+        else if (directionState == 5) //Up, Left
+        {
+            projectilePosition += new Vector2(-1f, 1f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToLeftSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(-0.1f, -0.1f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToLeftSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityX += -0.25f;
+            projectilePosition += new Vector2(-0.1f, -0.1f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToLeftSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityX += -0.5f;
+            projectilePosition += new Vector2(0.3f, 0.3f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToLeftSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityY += 0.25f;
+            projectilePosition += new Vector2(0.1f, 0.1f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToLeftSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityY += 0.5f;
+        }
+        else if (directionState == 6) //Up, Right
+        {
+            projectilePosition += new Vector2(1f, 1f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToRightSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(0.1f, -0.1f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToRightSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityX += 0.25f;
+            projectilePosition += new Vector2(0.1f, -0.1f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToRightSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityX += 0.5f;
+            projectilePosition += new Vector2(-0.3f, 0.3f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToRightSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityY += 0.25f;
+            projectilePosition += new Vector2(-0.1f, 0.1f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToRightSky"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityY += 0.5f;
+        }
+        else if (directionState == 7) //Down, Left
+        {
+            projectilePosition += new Vector2(-1f, -1f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToLeftGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(0.1f, -0.1f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToLeftGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityX += 0.25f;
+            projectilePosition += new Vector2(0.1f, -0.1f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToLeftGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityX += 0.5f;
+            projectilePosition += new Vector2(-0.3f, 0.3f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToLeftGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityY += 0.25f;
+            projectilePosition += new Vector2(-0.1f, 0.1f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToLeftGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityY += 0.5f;
+        }
+        else if (directionState == 8) //Down, Right
+        {
+            projectilePosition += new Vector2(1f, -1f);
+            GameObject projectile1 = Instantiate(Resources.Load("ProjectileToRightGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectilePosition += new Vector2(-0.1f, -0.1f);
+            GameObject projectile2 = Instantiate(Resources.Load("ProjectileToRightGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile2.GetComponent<ProjectileScript>().velocityX += -0.25f;
+            projectilePosition += new Vector2(-0.1f, -0.1f);
+            GameObject projectile3 = Instantiate(Resources.Load("ProjectileToRightGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile3.GetComponent<ProjectileScript>().velocityX += -0.5f;
+            projectilePosition += new Vector2(0.3f, 0.3f);
+            GameObject projectile4 = Instantiate(Resources.Load("ProjectileToRightGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile4.GetComponent<ProjectileScript>().velocityY += 0.25f;
+            projectilePosition += new Vector2(0.1f, 0.1f);
+            GameObject projectile5 = Instantiate(Resources.Load("ProjectileToRightGround"), projectilePosition, Quaternion.identity) as GameObject;
+            projectile5.GetComponent<ProjectileScript>().velocityY += 0.5f;
         }
     }
 
@@ -213,3 +515,4 @@ public class Player_Movement : MonoBehaviour {
 
   
 }
+ 
