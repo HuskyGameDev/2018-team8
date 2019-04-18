@@ -14,6 +14,7 @@ public class SpiderBoss : MonoBehaviour
     public Slider healthBar;
     public Transform Bottom, Top;
 
+    bool full = true;
     bool isDead = false;
     bool twoThirds = false;
     bool oneThird = false;
@@ -36,16 +37,20 @@ public class SpiderBoss : MonoBehaviour
         if (currentHp == 0)
         {
             isDead = true;
+            oneThird = false;
         }
 
         if (currentHp <= 2/3 * maxHp)
         {
             twoThirds = true;
+            full = false;
+
         }
         
         if ( currentHp <= 1/3 * maxHp)
         {
             oneThird = true;
+            twoThirds = false;
         }
     }
 }
