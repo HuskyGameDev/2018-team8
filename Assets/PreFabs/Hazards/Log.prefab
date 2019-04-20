@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4822188521237288121}
   m_Layer: 0
   m_Name: Log
-  m_TagString: Damage
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,3 +159,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rollSpeed: -3
+  playerCollide: 0

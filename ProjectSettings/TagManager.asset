@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Damage
   - Bullet
+  - Platform
   layers:
   - Default
   - TransparentFX
