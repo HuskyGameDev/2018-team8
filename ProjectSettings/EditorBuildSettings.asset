@@ -8,10 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level1Demo.unity
     guid: 23cf3447fd97460478ec858f2cdd0d40
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SaveHouse.unity
     guid: 6e93a852284e0e447a4df43ef8d28829
+  - enabled: 1
+    path: Assets/Scenes/ForestA.unity
+    guid: 419cc284c3ec2d24396d3c1eec33f9c2
+  - enabled: 1
+    path: Assets/Scenes/ForestACave.unity
+    guid: 223e07b69f533ce438a856d4e98f4ba5
+  - enabled: 1
+    path: Assets/Scenes/ForestB.unity
+    guid: 7c50414bc401f5f4ca7cdceb55b14e13
   m_configObjects: {}

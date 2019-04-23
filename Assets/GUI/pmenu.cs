@@ -6,10 +6,7 @@ public class pmenu : MonoBehaviour {
 
     public static bool paused = false;
     public GameObject menu;
-    // Use this for initialization
-	void Start () {
-		
-	}
+   
 	
 	// Update is called once per frame
 	void Update () {
